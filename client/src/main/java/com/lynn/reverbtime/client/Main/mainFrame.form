@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.lynn.reverbtime.client.Main.mainFrame">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="8" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="20" left="20" bottom="20" right="20"/>
+    <constraints>
+      <xy x="20" y="20" width="1048" height="643"/>
+    </constraints>
+    <properties>
+      <background color="-3610900"/>
+      <font swing-font="Button.font"/>
+    </properties>
+    <border type="etched"/>
+    <children>
+      <component id="9d9b6" class="javax.swing.JComboBox" binding="boxMat1">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="100" height="45"/>
+            <preferred-size width="100" height="45"/>
+            <maximum-size width="100" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="true"/>
+          <model/>
+          <toolTipText value=""/>
+        </properties>
+      </component>
+      <component id="24da2" class="javax.swing.JComboBox" binding="boxMat2">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="100" height="45"/>
+            <preferred-size width="100" height="45"/>
+            <maximum-size width="100" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="true"/>
+          <model>
+            <item value="0.5"/>
+            <item value="0.7"/>
+            <item value="0.9"/>
+            <item value="0.95"/>
+          </model>
+        </properties>
+      </component>
+      <component id="41e9e" class="javax.swing.JComboBox" binding="boxMat3">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="100" height="45"/>
+            <preferred-size width="100" height="45"/>
+            <maximum-size width="100" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="true"/>
+          <model>
+            <item value="0.5"/>
+            <item value="0.7"/>
+            <item value="0.9"/>
+            <item value="0.95"/>
+          </model>
+        </properties>
+      </component>
+      <component id="a6c1f" class="javax.swing.JComboBox" binding="boxMat4">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="100" height="45"/>
+            <preferred-size width="100" height="45"/>
+            <maximum-size width="100" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="true"/>
+          <model>
+            <item value="0.5"/>
+            <item value="0.7"/>
+            <item value="0.9"/>
+            <item value="0.95"/>
+          </model>
+        </properties>
+      </component>
+      <component id="3f43" class="javax.swing.JLabel" binding="labelMaterial">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="165" height="45"/>
+            <preferred-size width="165" height="45"/>
+            <maximum-size width="165" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Select wall materials:"/>
+        </properties>
+      </component>
+      <component id="1904e" class="javax.swing.JLabel" binding="labelWall1">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="55" height="45"/>
+            <preferred-size width="55" height="45"/>
+            <maximum-size width="55" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Futura"/>
+          <text value="Wall 1"/>
+        </properties>
+      </component>
+      <component id="7de51" class="javax.swing.JLabel" binding="labelWall2">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="55" height="45"/>
+            <preferred-size width="55" height="45"/>
+            <maximum-size width="55" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Wall 2"/>
+        </properties>
+      </component>
+      <component id="d4170" class="javax.swing.JLabel" binding="labelWall3">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="55" height="45"/>
+            <preferred-size width="55" height="45"/>
+            <maximum-size width="55" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Wall 3"/>
+        </properties>
+      </component>
+      <component id="e1f86" class="javax.swing.JLabel" binding="labelWall4">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="55" height="45"/>
+            <preferred-size width="55" height="45"/>
+            <maximum-size width="55" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Wall 4"/>
+        </properties>
+      </component>
+      <component id="96dac" class="javax.swing.JLabel" binding="labelCeiling">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="75" height="45"/>
+            <preferred-size width="75" height="45"/>
+            <maximum-size width="75" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Ceiling"/>
+        </properties>
+      </component>
+      <component id="af547" class="javax.swing.JComboBox" binding="boxMatCeil">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="100" height="45"/>
+            <preferred-size width="100" height="45"/>
+            <maximum-size width="100" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="true"/>
+          <model>
+            <item value="0.5"/>
+            <item value="0.7"/>
+            <item value="0.9"/>
+            <item value="0.95"/>
+          </model>
+        </properties>
+      </component>
+      <component id="dd107" class="javax.swing.JComboBox" binding="boxMatFloor">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="100" height="45"/>
+            <preferred-size width="100" height="45"/>
+            <maximum-size width="100" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="true"/>
+          <model>
+            <item value="0.5"/>
+            <item value="0.7"/>
+            <item value="0.9"/>
+            <item value="0.95"/>
+          </model>
+        </properties>
+      </component>
+      <component id="67ba1" class="javax.swing.JLabel" binding="labelFloor">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="75" height="45"/>
+            <preferred-size width="75" height="45"/>
+            <maximum-size width="75" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Floor"/>
+        </properties>
+      </component>
+      <component id="fd904" class="javax.swing.JLabel" binding="labelVolume">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="165" height="45"/>
+            <preferred-size width="165" height="45"/>
+            <maximum-size width="165" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Enter room volume:"/>
+        </properties>
+      </component>
+      <component id="d714b" class="javax.swing.JTextField" binding="tfVolume">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="75" height="45"/>
+            <preferred-size width="75" height="45"/>
+            <maximum-size width="75" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <columns value="0"/>
+          <text value=""/>
+          <toolTipText value="Enter Volume"/>
+        </properties>
+      </component>
+      <component id="76c4c" class="javax.swing.JLabel" binding="labelSize">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="150" height="45"/>
+            <preferred-size width="150" height="45"/>
+            <maximum-size width="150" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Enter wall size:"/>
+        </properties>
+      </component>
+      <component id="3d5be" class="javax.swing.JTextField" binding="tfSize1">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="75" height="45"/>
+            <preferred-size width="75" height="45"/>
+            <maximum-size width="75" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="8619a" class="javax.swing.JTextField" binding="tfSize2">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="75" height="45"/>
+            <preferred-size width="75" height="45"/>
+            <maximum-size width="75" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="e123e" class="javax.swing.JTextField" binding="tfSize3">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="75" height="45"/>
+            <preferred-size width="75" height="45"/>
+            <maximum-size width="75" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="45647" class="javax.swing.JTextField" binding="tfSize4">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="75" height="45"/>
+            <preferred-size width="75" height="45"/>
+            <maximum-size width="75" height="45"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="bee1e" class="javax.swing.JTextField" binding="tfSize5">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="75" height="45"/>
+            <preferred-size width="75" height="45"/>
+            <maximum-size width="75" height="45"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="74af3" class="javax.swing.JTextField" binding="tfSize6">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="75" height="45"/>
+            <preferred-size width="75" height="45"/>
+            <maximum-size width="75" height="45"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="5df44" class="javax.swing.JLabel" binding="labelAlpha">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="55" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="   α"/>
+        </properties>
+      </component>
+      <component id="acc70" class="javax.swing.JLabel" binding="labelMat1">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="d562d" class="javax.swing.JLabel" binding="labelMat2">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="e1216" class="javax.swing.JLabel" binding="labelMat3">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="509e3" class="javax.swing.JLabel" binding="labelMat4">
+        <constraints>
+          <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="861e7" class="javax.swing.JLabel" binding="labelMatCeil">
+        <constraints>
+          <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="9bc07" class="javax.swing.JButton" binding="calcButton">
+        <constraints>
+          <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="100" height="45"/>
+            <preferred-size width="100" height="45"/>
+            <maximum-size width="100" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <actionCommand value="Calculate"/>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="true"/>
+          <focusPainted value="true"/>
+          <font name="Futura"/>
+          <inheritsPopupMenu value="true"/>
+          <label value="Calculate"/>
+          <text value="Calculate"/>
+        </properties>
+      </component>
+      <component id="b0b1a" class="javax.swing.JLabel" binding="labelReverb">
+        <constraints>
+          <grid row="7" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <opaque value="true"/>
+          <text value="Reverb: "/>
+        </properties>
+      </component>
+      <component id="e5563" class="javax.swing.JLabel" binding="labelDelete">
+        <constraints>
+          <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="165" height="45"/>
+            <preferred-size width="165" height="45"/>
+            <maximum-size width="165" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Delete from database:"/>
+        </properties>
+      </component>
+      <component id="36d1c" class="javax.swing.JComboBox" binding="boxDelete">
+        <constraints>
+          <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="100" height="45"/>
+            <preferred-size width="100" height="45"/>
+            <maximum-size width="100" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="true"/>
+        </properties>
+      </component>
+      <component id="e0e1c" class="javax.swing.JButton" binding="buttonDelete">
+        <constraints>
+          <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="100" height="45"/>
+            <preferred-size width="100" height="45"/>
+            <maximum-size width="100" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Delete"/>
+        </properties>
+      </component>
+      <component id="dc78c" class="javax.swing.JTextField" binding="tfAddAlpha">
+        <constraints>
+          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="120" height="45"/>
+            <preferred-size width="120" height="45"/>
+            <maximum-size width="120" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="type alpha value"/>
+        </properties>
+      </component>
+      <component id="c9ebe" class="javax.swing.JButton" binding="buttonSubmit">
+        <constraints>
+          <grid row="3" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="100" height="45"/>
+            <preferred-size width="100" height="45"/>
+            <maximum-size width="100" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <label value="Submit"/>
+          <text value="Submit"/>
+        </properties>
+      </component>
+      <component id="c9f11" class="javax.swing.JTextField" binding="tfAddName">
+        <constraints>
+          <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="120" height="45"/>
+            <preferred-size width="120" height="45"/>
+            <maximum-size width="120" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="type name"/>
+        </properties>
+      </component>
+      <component id="4b8c0" class="javax.swing.JLabel" binding="labelAdd">
+        <constraints>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="165" height="45"/>
+            <preferred-size width="165" height="45"/>
+            <maximum-size width="165" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-15668168"/>
+          <text value="Add material to database:"/>
+        </properties>
+      </component>
+      <component id="9fcfa" class="javax.swing.JLabel" binding="labelMatFloor">
+        <constraints>
+          <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
