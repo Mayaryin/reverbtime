@@ -64,7 +64,7 @@ public class mainFrame extends JFrame {
     Constructor for the GUI
     */
     public mainFrame() {
-        this.client = new RoomComponentClient(WebClient.builder(),"http://localhost:8080/reverbtime/");
+        this.client = new RoomComponentClient(WebClient.builder(),"https://reverbtime.herokuapp.com/");
         setContentPane(mainPanel);
         setTitle("ReverbTime");
         setSize(1000, 700);
