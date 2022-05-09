@@ -11,7 +11,7 @@ import java.util.Optional;
 */
 
 @RestController
-@RequestMapping(path="reverbtime/roomcomponents")
+@RequestMapping(path="roomcomponents")
 public class rcController {
 
     private final rcService rcService;
