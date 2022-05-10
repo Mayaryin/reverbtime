@@ -1,6 +1,6 @@
 # Reverbtime
 
-A simple Springboot web application using a Swing GUI to calculate reverberation time of a room.
+A simple Springboot web application using a Swing GUI to calculate reverberation time of a room by using Sabine's formula.
 Enter room volume and select the materials of the walls ceiling and floor. The corresponding absorption coefficients (alpha vaules) are retrieved from a database by calling a Rest API.
 
 New materials and their alpha values can be added to the database. Existing entries can be deleted.
