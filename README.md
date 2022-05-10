@@ -7,5 +7,5 @@ New materials and their alpha values can be added to the database. Existing entr
 
 This repository contains the source code of both a spring web client as well as the corresponding spring server.
 
-![Alt text](Screenshot 1.png "Screenshot of the app")
+![Alt text](images/Screenshot%201.png "Screenshot of the app")
 
