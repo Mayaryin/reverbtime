@@ -1,10 +1,10 @@
-package com.lynn.reverbtime.client.Main;
+package com.lynn.reverbtime.client.UI;
 
 import com.lynn.reverbtime.client.Calculations.Sabine;
 import com.lynn.reverbtime.client.RoomComponent.RoomComponent;
 import com.lynn.reverbtime.client.RoomComponent.RoomComponentClient;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import javax.swing.*;
@@ -15,8 +15,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@SpringBootApplication
+@Controller
 public class mainFrame extends JFrame {
+    private JPanel mainPanel;
     private JTextField tfVolume;
     private JComboBox boxMat1;
     private JComboBox boxMat2;
@@ -24,7 +25,6 @@ public class mainFrame extends JFrame {
     private JComboBox boxMat4;
     private JButton calcButton;
     private JLabel labelReverb;
-    private JPanel mainPanel;
     private JTextField tfSize1;
     private JTextField tfSize2;
     private JTextField tfSize3;
@@ -63,8 +63,9 @@ public class mainFrame extends JFrame {
     /*
     Constructor for the GUI
     */
+    @Autowired
     public mainFrame() {
-        this.client = new RoomComponentClient(WebClient.builder(),"https://reverbtime.herokuapp.com/");
+        this.client = new RoomComponentClient(WebClient.builder(), "https://reverbtime.herokuapp.com/");
         setContentPane(mainPanel);
         setTitle("ReverbTime");
         setSize(1000, 700);
@@ -129,9 +130,9 @@ public class mainFrame extends JFrame {
     /*
      Sets font to all GUI objects and default texts to combo boxes.
     */
-    public void style(){
-        Font font = new Font("Futura", Font.PLAIN,14);
-        Font alphaFont = new Font("Futura", Font.PLAIN,18);
+    public void style() {
+        Font font = new Font("Futura", Font.PLAIN, 14);
+        Font alphaFont = new Font("Futura", Font.PLAIN, 18);
         mainPanel.setFont(font);
         tfVolume.setFont(font);
 
@@ -209,7 +210,7 @@ public class mainFrame extends JFrame {
             JComboBox box = (JComboBox) e.getSource();
             String name = box.getSelectedItem().toString();
             for (RoomComponent r : allComps) {
-                if (r.getName() == name){
+                if (r.getName() == name) {
                     destination.setText(r.getAlpha().toString());
                     break;
                 }
@@ -222,27 +223,26 @@ public class mainFrame extends JFrame {
     as well as texts from the size text fields are read and then handed over to the calculations class "Sabine". It also
     updates the text in the results textfield
     */
-    private class calcButtonHandler implements ActionListener{
+    private class calcButtonHandler implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
                 List<Double> alphas = List.of(labelMat1.getText(), labelMat2.getText(),
                                 labelMat3.getText(), labelMat4.getText(),
                                 labelMatCeil.getText(), labelMatFloor.getText())
-                                .stream().map(i -> Double.parseDouble(i))
-                                .collect(Collectors.toList());
+                        .stream().map(i -> Double.parseDouble(i))
+                        .collect(Collectors.toList());
                 List<Double> surfaceAreas = List.of(tfSize1.getText(), tfSize2.getText(),
                                 tfSize3.getText(), tfSize4.getText(), tfSize5.getText(), tfSize6.getText())
-                                .stream()
-                                .map(i -> Double.parseDouble(i))
-                                .collect(Collectors.toList());
+                        .stream()
+                        .map(i -> Double.parseDouble(i))
+                        .collect(Collectors.toList());
 
                 sabine = new Sabine(Double.parseDouble(tfVolume.getText()), surfaceAreas, alphas);
                 Double reverb = sabine.calculateReverbTime();
                 String s = String.format("%,.2f", reverb);
                 labelReverb.setText("<html><body><center>Reverberation Time: <br>" + s + " seconds</center></body></html>");
-            }
-            catch(NumberFormatException nfe){
+            } catch (NumberFormatException nfe) {
                 System.out.println("NumberFormat Exception: invalid input string");
             }
         }
@@ -252,7 +252,7 @@ public class mainFrame extends JFrame {
     Subclass that handles click on submit button: New room component is created and added to database if no other
     object with the same name is already registered
     */
-    private class submitButtonHandler implements ActionListener{
+    private class submitButtonHandler implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
@@ -275,19 +275,11 @@ public class mainFrame extends JFrame {
     Subclass that handles click on delete button: Referring object is deleted from database and a new array of objects
     is loaded and distributed to the drop down menus.
     */
-    private class deleteButtonHandler implements ActionListener{
+    private class deleteButtonHandler implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             client.removeComponentFromDataBase(boxDelete.getSelectedItem().toString());
             retrieveData();
         }
     }
-
-    /*
-    Main method, starts application
-    */
-    public static void main(String[] args) {
-            SpringApplication.run(mainFrame.class, args);
-            mainFrame reverbTime = new mainFrame();
-        }
-    }
+}

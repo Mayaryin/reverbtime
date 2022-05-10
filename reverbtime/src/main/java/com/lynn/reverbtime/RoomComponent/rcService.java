@@ -7,11 +7,12 @@ import java.util.List;
 import java.util.Optional;
 
 
-@Service
+
 /*
 Service class that provides methods to save to, delete and get items from the table by
-calling the corresponding repository, as well as to perform business logic.
+calling the corresponding repository. Performs business logic as well.
 */
+@Service
 public class rcService {
 
     private final rcRepository rcRepository;

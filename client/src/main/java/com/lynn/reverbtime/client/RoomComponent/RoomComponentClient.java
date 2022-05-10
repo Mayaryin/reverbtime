@@ -20,7 +20,7 @@ public class RoomComponentClient {
 
     //Set up WebClient with correct base url
     public RoomComponentClient(WebClient.Builder builder,
-                               @Value("${reverbtime.roomcomponents.url}") String BaseUrl) {
+                               @Value("") String BaseUrl) {
         webClient = WebClient.builder().baseUrl(BaseUrl).build();
     }
 
@@ -57,14 +57,14 @@ public class RoomComponentClient {
 
     //DELETE request
     public void removeComponentFromDataBase(@PathVariable("name") String name) {
-        ClientResponse clientResponse =  webClient
+        webClient
                 .delete()
                 .uri("/roomcomponents/" +name)
                 .retrieve()
-                .bodyToMono(ClientResponse.class).block();
+                .bodyToMono(Void.class).block();
 
-        if (clientResponse.statusCode().equals(HttpStatus.INTERNAL_SERVER_ERROR)) {
+        /*if (clientResponse.statusCode().equals(HttpStatus.INTERNAL_SERVER_ERROR)) {
             throw new RuntimeException("Internal Server Error!");
-        }
+        }*/
     }
 }
